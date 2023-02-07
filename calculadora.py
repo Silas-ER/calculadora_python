@@ -13,6 +13,9 @@ def print_opcoes():
     print("Tabuada Individual - digite tabuada e em seguida o numero que deseja \n")
     print("Tabuada Geral - digite tabuada e depois todos \n")
 
+def end():
+    print("Obrigado por usar nossa calculadora!")
+
 def soma(n1, n2):
     s = n1 + n2
     print("O resultado da soma é {}".format(s))
@@ -101,14 +104,15 @@ def opcoes():
             tabuada_uni(numero)
     else:
         print("Selecione uma opção valida!")
-        opções()
-
-def end():
-    print("Obrigado por usar nossa calculadora!")
+        retorno()
 
 def geral():
     print_boasvindas()
     print_opcoes()
+    opcoes()
+
+def retorno():
+    print("\n")
     opcoes()
 
 if (__name__ == "__main__"):
