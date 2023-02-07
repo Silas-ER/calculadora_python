@@ -2,6 +2,16 @@ def print_boasvindas():
     print("+-*/+-*/+-*/+-*/+-*/+-*/+-*/+-*/+-*/+-*/")
     print("+-*/+-*/+-Calduladora Python+-*/+-*/+-*/")
     print("+-*/+-*/+-*/+-*/+-*/+-*/+-*/+-*/+-*/+-*/")
+    print("\n")
+
+def print_opcoes():
+    print("As operações que dispomos atualmente são: \n")
+    print("Soma - digite soma ou somar \n")
+    print("Subtração - digite subtração ou subtrair \n")
+    print("Divisão - digite divisão ou dividir \n")
+    print("Multiplicação - digite multiplicação ou multiplicar \n")
+    print("Tabuada Individual - digite tabuada e em seguida o numero que deseja \n")
+    print("Tabuada Geral - digite tabuada e depois todos \n")
 
 def soma(n1, n2):
     s = n1 + n2
@@ -72,6 +82,7 @@ def end():
 
 def geral():
     print_boasvindas()
+    print_opcoes()
     opcoes()
 
 if (__name__ == "__main__"):
