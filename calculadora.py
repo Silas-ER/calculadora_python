@@ -23,7 +23,8 @@ def soma(n1, n2):
         return end()
 
 def subtracao(n1, n2):
-    return n1 - n2 
+    sub = n1 - n2
+    print("O resultado da subtração é {}".format(sub)) 
     resposta = input("Deseja fazer outra operação? ")
     if(resposta == "sim"):
         return opcoes()
@@ -31,6 +32,7 @@ def subtracao(n1, n2):
         return end()
 
 def multiplicacao(n1, n2):
+
     return n1*n2
     resposta = input("Deseja fazer outra operação? ")
     if(resposta == "sim"):
@@ -47,9 +49,13 @@ def divisao(n1, n2):
         return end()
 
 def tabuada_geral():
-    n = range(1,11)
-    n1 = range(1,11)
-    #tabuada = [n * n1 for ]
+    n1 = [numero for numero in range(1,11)]
+    n2 = [numero for numero in range(1,11)]
+
+    for numero in n1:
+        print("\nTabuada de {}:".format(numero))
+        for numero2 in n2:
+            print("{} x {} = {}".format(numero, numero2, numero*numero2))
     resposta = input("Deseja fazer outra operação? ")
     if(resposta == "sim"):
         return opcoes()
@@ -73,9 +79,28 @@ def opcoes():
         n1 = float(input("Digite o primeiro valor a ser somado: "))
         n2 = float(input("Digite o outro valor a ser somado: "))
         soma(n1,n2)
+    elif(escolha == "subtração" or escolha == "subtrair"):
+        n1 = float(input("Digite o primeiro valor a ser subtraido: "))
+        n2 = float(input("Digite o outro valor a ser subtraido: "))
+        subtracao(n1,n2)
+    elif(escolha == "multiplicação" or escolha == "multiplicar"):    
+        n1 = float(input("Digite o primeiro valor a ser multiplicado: "))
+        n2 = float(input("Digite o outro valor a ser multiplicado: "))
+        multiplicacao(n1,n2)
+    elif(escolha == "divisão" or escolha == "dividir"):
+        n1 = float(input("Digite o dividendo: "))
+        n2 = float(input("Digite o divisor: "))
+        divisao(n1,n2)
     elif(escolha == "tabuada"):
-        numero = int(input("Selecione o número que deseja saber a tabuada: "))
-        tabuada_uni(numero)
+        numero = input("Selecione o número que deseja saber a tabuada: ")
+        if(numero == "todos"):
+            tabuada_geral()
+        else:
+            int(numero)
+            tabuada_uni(numero)
+    else:
+        print("Selecione uma opção valida!")
+        opções()
 
 def end():
     print("Obrigado por usar nossa calculadora!")
