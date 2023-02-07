@@ -65,8 +65,9 @@ def tabuada_geral():
 def tabuada_uni(n):
     n1 = [numero for numero in range(1,11)]
     n2 = [numero*n for numero in n1]
+    print("Tabuada de {}".format(n))
     for num in range(10):
-        print("A multiplicação de {} x {} = {}".format(n1[num],n,n2[num]))
+        print("{} x {} = {}".format(n1[num],n,n2[num]))
     resposta = input("Deseja fazer outra operação? ")
     if(resposta == "sim"):
         return opcoes()
@@ -96,7 +97,7 @@ def opcoes():
         if(numero == "todos"):
             tabuada_geral()
         else:
-            int(numero)
+            numero = int(numero)
             tabuada_uni(numero)
     else:
         print("Selecione uma opção valida!")
