@@ -35,8 +35,8 @@ def subtracao(n1, n2):
         return end()
 
 def multiplicacao(n1, n2):
-
-    return n1*n2
+    m = n1*n2
+    print("O resultado da multiplicação é {}".format(m))
     resposta = input("Deseja fazer outra operação? ")
     if(resposta == "sim"):
         return opcoes()
@@ -44,7 +44,8 @@ def multiplicacao(n1, n2):
         return end()
 
 def divisao(n1, n2):
-    return n1/n2
+    div = n1/n2
+    print("O resultado da divisão é {}".format(div))
     resposta = input("Deseja fazer outra operação? ")
     if(resposta == "sim"):
         return opcoes()
